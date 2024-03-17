@@ -1,0 +1,384 @@
+/*Import Roboto and Poopins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+/*variable define */
+:root{
+    --primary-text-color: #0b2233;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px;
+}
+
+body{
+    font-family: 'Poppins', 'sans-serif';
+    color: var(--primary-text-color);
+}
+
+/*html is a root element define to use rem sizing  unit*/
+/* html {
+    font-size: 10px;
+} */
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-family:  "Roboto", sans-serif;
+    font-size: 1.25rem;
+    color:var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;  
+    display: inline-block;
+}
+
+
+
+/*utility class */
+.small-bold-text {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1180px;
+    margin:0px auto;    /*or margin-inline:auto (inline i.e from left and right only */
+    padding-inline: var(--padding-inline-section);
+}
+
+.banner-text {
+    color:white;
+    text-align: center;
+    padding: 15px 30px;
+
+}
+
+.top-banner {
+    background-color: #4fb3d4;
+    background-image: url("../assets/asset\ 32.png");
+    /* background-repeat: no-repeat; */
+    background-size: 300px;  
+}
+
+
+
+/* Navbar design */
+.flex {
+    display:flex;
+    align-items: center;
+}
+
+.nav-link ul {
+    list-style: none;
+    gap:35px;
+}
+
+.company-logo img {
+    width:200px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 0;
+
+}
+
+.hover-links {
+    color:var(--primary-text-color);
+    transition:all 0.2s ease-in-out;
+}
+
+.hover-links:hover {
+    color:var(--accent-color);
+}
+
+.primary-button {
+    background-color: var(--accent-color);
+    color:white !important;
+    padding:10px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+}
+
+.primary-button:hover {
+    background-color: var(--accent-color-dark);
+}
+.secondary-button {
+    border: 0.5px solid #b9cde4;
+    color:black;
+    padding:10px 24px;
+    border-radius: 6px;
+    transition: 0.2s ease-in;
+}
+.secondary-button:hover {
+    border-color: var(--accent-color);
+}
+
+
+
+/*Header section Design */
+header {
+    padding:50px var(--padding-inline-section) 0;
+}
+
+.header-section .header-right img {
+    width:600px;
+}
+
+.header-section {
+    gap:50px;
+    justify-content: center;
+
+}
+
+.header-left {
+    max-width: 40vw;
+}
+
+.header-left p {
+    margin:20px 0px 35px 0px;
+
+}
+
+
+
+/*company section */
+.company-section .company-header {
+    text-align: center;
+    margin:30px 0px 30px 0px;
+    color:var(--primary-text-color);
+}
+
+.company-section .logo {
+    height:46px;
+
+}
+
+.company-section .logos {
+    justify-content: space-between;
+}
+
+
+
+/*feature section design */
+.feature-section {
+    padding:80px var(--padding-inline-section) 0;
+
+}
+.feature-header {
+    text-align: center;
+}
+
+.feature-header h2 {
+    margin-bottom: 20px;
+}
+
+.features-card {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+   max-width: 30%;  
+   text-align: center;
+}
+.feature-section .feature-area {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap:30px;
+    padding-block:50px;
+}
+
+.feature-section {
+    background-image: url("../assets/asset\ 34.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-block: 50px;
+    background-size: 800px;
+}
+
+
+
+/*Big -feature section design */
+.big-feature-section {
+    margin-top:30px;
+}
+.big-feature .feature-desc {
+    padding-inline:40px;
+    color:black;
+}
+
+.big-feature-section .big-feature1 {
+    flex-direction: row-reverse;      /*second section me image ko right side kiye */
+}
+
+
+
+/*example section design */
+.example-section .example-header {
+    flex-direction: column;
+    gap:20px;
+
+}
+.example-header a {
+    margin-bottom: 20px;
+}
+.example-card {
+    width:23%;
+    position: relative;
+    min-height: 300px;
+    background-color: black;  /*if linear gradient not work then its work */
+   color:white;
+
+}
+
+.example-card h3 {
+    position: absolute;
+    bottom:20px;
+    left:20px;
+    right: 20px;
+    color:white;
+}
+
+/*background image take with linear gradient coz image k upar black color v aa rha hai so achieve this we use like this */
+.example-card:nth-child(1){
+    background: linear-gradient(rgb(0,0,0,0.1), rgb(0,0,0,0.8)), url("../assets/asset\ 36.jpeg");
+    /*0.1 opacity upar me rahe and when niche me 0.8 badha denge */
+    background-size: cover;
+}
+.example-card:nth-child(2){
+    background: linear-gradient(rgb(0,0,0,0.1), rgb(0,0,0,0.8)), url("../assets/asset\ 37.jpeg");
+    background-size: cover;
+}
+.example-card:nth-child(3){
+    background: linear-gradient(rgb(0,0,0,0.1), rgb(0,0,0,0.8)), url("../assets/asset\ 38.jpeg");
+    background-size: cover;
+}
+.example-card:nth-child(4){
+    background: linear-gradient(rgb(0,0,0,0.1), rgb(0,0,0,0.8)), url("../assets/asset\ 39.jpeg");
+    background-size: cover;
+}
+
+.examples-area {
+    gap:30px;    /*to create a gap between card */
+}
+
+.example-card:hover {
+    box-shadow: 0 0 10px #777575;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+
+
+
+/* Paneltest Section */
+.paneltest-section{
+    margin-block: 40px;
+    padding-block: 40px;
+    background-color: #183b54;
+}
+
+.paneltest-desc{
+    flex-direction: column;
+    align-items: flex-start; 
+    /* justify-content: flex-start; */   /*its not work here */
+    color: white;
+    gap: 20px;
+}
+
+.panel-content{
+    align-items: flex-start;
+    gap: 40px;
+    font-size: 0.95rem;
+    color: #b9cde4;
+}
+
+.panel-content ul li {
+    list-style: none;
+}
+
+.panel-content-left .panel-content-right{
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.paneltest-img img{
+    width: 100%;
+}
+
+.paneltest-desc p{
+    color:#b9cde4;
+}
+
+
+/* CTA SECTION Design*/
+.cta-section {
+    margin-top: 30px;
+    padding-block:50px;
+}
+
+.cta-desc {
+    flex-direction: column;
+    gap:30px;
+}
+
+
+/*Footer section Design */
+footer {
+    background-color: #ebf2fa;
+    padding: 80px var(--padding-inline-section) 80px;
+    justify-content: space-around;
+}
+.footer-section {
+    margin-top: 30px;
+    gap:150px;
+}
+
+.link-desc {
+    flex-direction: column;
+    row-gap:12px;
+}
+
+.link-desc a {
+    color: #586d7f;
+
+}
+
+
+/*sub footer design */
+.subfooter{
+    background-color: #b9cde4;
+    padding: 20px 60px 20px;  /*top:20px , left/right:60px , bottom:20px */
+    font-size: 0.9rem;
+}
+.subfooter-section {
+    justify-content: space-evenly;
+}
+.subfooter-desc {
+    gap:30px;
+}
+
+.social-media {
+    gap:20px;
+
+}
